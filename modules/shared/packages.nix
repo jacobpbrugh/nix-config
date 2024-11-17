@@ -2,39 +2,39 @@
 
 with pkgs; [
   # General packages for development and system management
-  alacritty
-  aspell
-  aspellDicts.en
-  bash-completion
+  # alacritty
+  # aspell
+  # aspellDicts.en
+  # bash-completion
   bat
-  btop
+  # btop
   coreutils
-  killall
-  neofetch
+  # killall
+  # neofetch
   openssh
-  sqlite
+  # sqlite
   wget
   zip
 
   # Encryption and security tools
   age
   age-plugin-yubikey
-  gnupg
-  libfido2
+  # gnupg
+  # libfido2
 
-  # Cloud-related tools and SDKs
-  docker
-  docker-compose
+  # # Cloud-related tools and SDKs
+  # docker
+  # docker-compose
 
-  # Media-related packages
-  emacs-all-the-icons-fonts
-  dejavu_fonts
-  ffmpeg
+  # # Media-related packages
+  # emacs-all-the-icons-fonts
+  # dejavu_fonts
+  # ffmpeg
   fd
-  font-awesome
-  hack-font
-  noto-fonts
-  noto-fonts-emoji
+  # font-awesome
+  # hack-font
+  # noto-fonts
+  # noto-fonts-emoji
   meslo-lgs-nf
 
   # Node.js development tools
@@ -44,10 +44,10 @@ with pkgs; [
 
   # Text and terminal utilities
   htop
-  hunspell
-  iftop
-  jetbrains-mono
-  jq
+  # hunspell
+  # iftop
+  # jetbrains-mono
+  # jq
   ripgrep
   tree
   tmux
@@ -55,7 +55,7 @@ with pkgs; [
   unzip
   zsh-powerlevel10k
 
-  # Python packages
-  python39
-  python39Packages.virtualenv # globally install virtualenv
+  # # Python packages
+  # python39
+  # python39Packages.virtualenv # globally install virtualenv
 ]
