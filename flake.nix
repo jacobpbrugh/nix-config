@@ -69,6 +69,11 @@
         "check-keys" = mkApp "check-keys" system;
         "rollback" = mkApp "rollback" system;
       };
+      homeConfig = system: home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit inputs outputs; };
+        modules = [ ./modules/home-manager.nix ];
+      };
     in
     {
       devShells = forAllSystems devShell;
@@ -116,5 +121,10 @@
           ./hosts/nixos
         ];
      });
+
+      homeConfigurations = forAllSystems (system: {
+        "${user}@${system}" = homeConfig system;
+      });
+
   };
 }
