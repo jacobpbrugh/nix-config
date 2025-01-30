@@ -5,21 +5,21 @@ let name = "Jacob Brugh";
     email = "jacobpbrugh@gmail.com"; in
 {
   # Shared shell configuration
-  zsh = {
-    enable = true;
-    autocd = false;
-    plugins = [
-      {
-        name = "powerlevel10k";
-        src = pkgs.zsh-powerlevel10k;
-        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-      }
-      {
-        name = "powerlevel10k-config";
-        src = lib.cleanSource ./config;
-        file = "p10k.zsh";
-      }
-    ];
+  # zsh = {
+  #   enable = true;
+  #   autocd = false;
+  #   plugins = [
+  #     {
+  #       name = "powerlevel10k";
+  #       src = pkgs.zsh-powerlevel10k;
+  #       file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+  #     }
+  #     {
+  #       name = "powerlevel10k-config";
+  #       src = lib.cleanSource ./config;
+  #       file = "p10k.zsh";
+  #     }
+  #   ];
 
   #   initExtraFirst = ''
   #     if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then
@@ -57,8 +57,8 @@ let name = "Jacob Brugh";
   #   '';
   # };
 
-  git = {
-    enable = true;
+  # git = {
+  #   enable = true;
     # ignores = [ "*.swp" ];
     # userName = name;
     # userEmail = email;
@@ -74,10 +74,10 @@ let name = "Jacob Brugh";
     #   pull.rebase = true;
     #   rebase.autoStash = true;
     # };
-  };
+  # };
 
-  vim = {
-    enable = true;
+  # vim = {
+  #   enable = true;
     # plugins = with pkgs.vimPlugins; [ vim-airline vim-airline-themes vim-startify vim-tmux-navigator ];
     # settings = { ignorecase = true; };
     # extraConfig = ''
@@ -184,7 +184,7 @@ let name = "Jacob Brugh";
     #   let g:airline_theme='bubblegum'
     #   let g:airline_powerline_fonts = 1
     #   '';
-     };
+    #  };
 
   # alacritty = {
   #   enable = true;
@@ -249,10 +249,10 @@ let name = "Jacob Brugh";
   #       };
   #     };
   #   };
-  };
+  # };
 
-  ssh = {
-    enable = true;
+  # ssh = {
+  #   enable = true;
     # includes = [
     #   (lib.mkIf pkgs.stdenv.hostPlatform.isLinux
     #     "/home/${user}/.ssh/config_external"
@@ -274,10 +274,10 @@ let name = "Jacob Brugh";
     #     ];
     #   };
     # };
-  };
+  # };
 
-  tmux = {
-    enable = true;
+  # tmux = {
+  #   enable = true;
     # plugins = with pkgs.tmuxPlugins; [
     #   vim-tmux-navigator
     #   sensible
@@ -358,5 +358,5 @@ let name = "Jacob Brugh";
     #   bind-key -T copy-mode-vi 'C-l' select-pane -R
     #   bind-key -T copy-mode-vi 'C-\' select-pane -l
     #   '';
-    };
+    # };
 }
