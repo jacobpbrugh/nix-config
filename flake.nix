@@ -63,11 +63,11 @@
         "build-switch" = mkApp "build-switch" system;
         "rollback" = mkApp "rollback" system;
       };
-      homeConfig = system: home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = { inherit inputs outputs; };
-        modules = [ ./modules/home-manager.nix ];
-      };
+      # homeConfig = system: home-manager.lib.homeManagerConfiguration {
+      #   pkgs = nixpkgs.legacyPackages.${system};
+      #   extraSpecialArgs = { inherit inputs outputs; };
+      #   modules = [ ./modules/home-manager.nix ];
+      # };
     in
     {
       devShells = forAllSystems devShell;
@@ -116,9 +116,9 @@
         ];
      });
 
-      homeConfigurations = forAllSystems (system: {
-        "${user}@${system}" = homeConfig system;
-      });
+      # homeConfigurations = forAllSystems (system: {
+      #   "${user}@${system}" = homeConfig system;
+      # });
 
   };
 }
