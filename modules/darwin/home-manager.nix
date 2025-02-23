@@ -60,8 +60,8 @@ in
   };
 
   # Fully declarative dock using the latest from Nix Store
-  # local.dock.enable = true;
-  # local.dock.entries = [
+  local.dock.enable = false;
+  local.dock.entries = [];
     # { path = "/Applications/Slack.app/"; }
     # { path = "/System/Applications/Messages.app/"; }
     # { path = "/System/Applications/Facetime.app/"; }
